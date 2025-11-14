@@ -4,23 +4,23 @@
   <table class="mt-5">
     <thead>
       <tr>
-        <th class="border border-black p-3 text-center">No</th>
-        <th class="border border-black p-3">Majors Name</th>
-        <th class="border border-black p-3">Action</th>
+        <th class="border-2 border-black p-3 hover:bg-gray-100 text-center">No</th>
+        <th class="border-2 border-black p-3 hover:bg-gray-100">Majors Name</th>
+        <th class="border-2 border-black p-3 hover:bg-gray-100">Action</th>
       </tr>
     </thead>
     <tbody>
       @forelse ($majors as $major)
       <tr>
-        <td class="border border-black p-3 text-center">{{ $loop->iteration }}</td>
-        <td class="border border-black p-3">{{ $major->majors_name }}</td>
-        <td class="border border-black p-3">
-          <a class="text-white py-1 px-4 bg-yellow-500 rounded-lg" href="/form/edit/{{ $major->id }}">Edit</a>
+        <td class="border-2 border-black p-3 hover:bg-gray-100 text-center">{{ $loop->iteration }}</td>
+        <td class="border-2 border-black p-3 hover:bg-gray-100">{{ $major->majors_name }}</td>
+        <td class="border-2 border-black p-3 hover:bg-gray-100">
+          <a class="text-white py-1 px-4 bg-yellow-500 rounded-lg text-center hover:bg-yellow-600" href="/form/edit/{{ $major->id }}">Edit</a>
 
           <form action="/form/delete/{{ $major->id }}" method="post" style="display:inline">
             @csrf
             @method('DELETE')
-            <button class="text-white py-1 px-4 bg-red-600 rounded-lg" type="submit">delete</button>
+            <button class="text-white py-1 px-4 bg-red-600 rounded-lg text-center hover:bg-red-700" type="submit">delete</button>
           </form>
         </td>
       </tr>
