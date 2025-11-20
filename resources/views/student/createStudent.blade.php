@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="p-5 bg-slate-950 flex justify-center items-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-900 via-[#0a0a0a] to-black text-slate-200 selection:bg-cyan-500 selection:text-black">
+<body class="p-5 h-[100vh] bg-slate-950 flex justify-center items-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-900 via-[#0a0a0a] to-black text-slate-200 selection:bg-cyan-500 selection:text-black">
 
     <div class="bg-[rgba(0,0,0,0.1)] border border-gray-300 shadow-lg py-10 px-7 rounded-xl w-full max-w-md">
         <h1 class="text-3xl text-center font-bold text-blue-700">Form Student</h1>

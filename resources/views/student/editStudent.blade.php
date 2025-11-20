@@ -8,9 +8,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="p-5 flex justify-center items-center min-h-screen bg-gray-100">
+<body class="p-5 min-h-screen bg-slate-950 flex justify-center items-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-900 via-[#0a0a0a] to-black text-slate-200 selection:bg-cyan-500 selection:text-black">
 
-    <div class="bg-white border border-gray-300 shadow-lg py-10 px-7 rounded-xl w-full max-w-md">
+    <div class="bg-[rgba(0,0,0,0.1)] border border-gray-300 shadow-lg py-10 px-7 rounded-xl w-full max-w-md">
         <h1 class="text-3xl text-center font-bold text-blue-700">Edit Student</h1>
 
         <form class="mt-7 space-y-5" action="/student/update/{{ $students->id }}" method="post">
@@ -20,7 +20,7 @@
             <div>
                 <label for="name" class="font-semibold">Name</label>
                 <input
-                    class="border border-gray-400 mt-2 w-full rounded-lg p-2"
+                    class="bg-transparent border border-gray-400 mt-2 w-full rounded-lg p-2"
                     type="text"
                     name="name"
                     id="name"
@@ -35,7 +35,7 @@
             <div>
                 <label for="class" class="font-semibold">Class</label>
                 <input
-                    class="border border-gray-400 mt-2 w-full rounded-lg p-2"
+                    class="bg-transparent border border-gray-400 mt-2 w-full rounded-lg p-2"
                     type="text"
                     name="class"
                     id="class"
@@ -50,7 +50,7 @@
             <div>
                 <label for="phone" class="font-semibold">Phone</label>
                 <input
-                    class="border border-gray-400 mt-2 w-full rounded-lg p-2"
+                    class="bg-transparent border border-gray-400 mt-2 w-full rounded-lg p-2"
                     type="text"
                     name="phone"
                     id="phone"
@@ -66,7 +66,7 @@
             <div>
                 <label for="email" class="font-semibold">Email</label>
                 <input
-                    class="border border-gray-400 mt-2 w-full rounded-lg p-2"
+                    class="bg-transparent border border-gray-400 mt-2 w-full rounded-lg p-2"
                     type="email"
                     name="email"
                     id="email"
@@ -83,11 +83,11 @@
                 <select
                     name="gender"
                     id="gender"
-                    class="border border-gray-400 mt-2 w-full rounded-lg p-2 bg-white"
+                    class="bg-transparent border border-gray-400 mt-2 w-full rounded-lg p-2"
                 >
-                    <option value="">-- Pilih Gender --</option>
-                    <option value="laki-laki" {{ $students->gender === 'laki-laki' ? 'selected' : '' }}>Laki-laki</option>
-                    <option value="perempuan" {{ $students->gender === 'perempuan' ? 'selected' : '' }}>Perempuan</option>
+                    <option class="text-black" value="">-- Pilih Gender --</option>
+                    <option class="text-black" value="laki-laki" {{ $students->gender === 'laki-laki' ? 'selected' : '' }}>Laki-laki</option>
+                    <option class="text-black" value="perempuan" {{ $students->gender === 'perempuan' ? 'selected' : '' }}>Perempuan</option>
                 </select>
                 @error('gender')
                     <span class="text-red-600 text-sm">{{ $message }}</span>
@@ -97,7 +97,7 @@
             <div>
                 <label for="nisn" class="font-semibold">NISN</label>
                 <input
-                    class="border border-gray-400 mt-2 w-full rounded-lg p-2"
+                    class="bg-transparent border border-gray-400 mt-2 w-full rounded-lg p-2"
                     type="text"
                     name="nisn"
                     id="nisn"

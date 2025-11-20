@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Edit Majors</title>
+  <title>Edit Subject</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
@@ -24,10 +24,10 @@
   <div class="relative z-10 border border-white/10 bg-white/5 backdrop-blur-xl py-12 px-8 rounded-2xl w-full max-w-md shadow-[0_0_40px_-10px_rgba(6,182,212,0.15)] hover:shadow-[0_0_60px_-15px_rgba(6,182,212,0.3)] transition-all duration-500 group">
 
     <h1 class="text-3xl text-center font-black tracking-[0.2em] text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 uppercase mb-10 drop-shadow-sm">
-      Edit Majors
+      Edit Subject
     </h1>
 
-    <form class="mt-2 space-y-6" action="/form/update/{{ $majors->id }}" method="post">
+    <form class="mt-2 space-y-6" action="/subject/update/{{ $subjects->id }}" method="post">
       @csrf
       @method('PUT')
 
@@ -41,14 +41,13 @@
       <input
       class="w-full bg-slate-900/50 border border-slate-700 text-slate-100 rounded-lg px-4 py-3 outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/50 focus:bg-slate-900 transition-all duration-300 placeholder-slate-600 shadow-inner"
       type="text"
-      name="majors_name"
+      name="subject_name"
       id="name"
-      value="{{ $majors->majors_name }}"
-      placeholder="Edit nama jurusan..."
-      autocomplete="off"
+      value="{{ $subjects->subject_name }}"
+      placeholder="Subject Name..."
       >
 
-      @error('majors_name')
+      @error('subject_name')
       <span class="error-message text-xs text-rose-400 mt-2 block font-medium animate-pulse pl-1">
         ⚠ {{ $message }}
       </span>
@@ -62,7 +61,7 @@
       Update Data
     </button>
 
-    <a href="/form/index" class="block text-center text-xs text-slate-500 hover:text-cyan-300 transition-colors duration-300 mt-6 hover:underline underline-offset-4 decoration-cyan-500/50">
+    <a href="/subject/index" class="block text-center text-xs text-slate-500 hover:text-cyan-300 transition-colors duration-300 mt-6 hover:underline underline-offset-4 decoration-cyan-500/50">
       &larr; Batalkan & Kembali
     </a>
   </form>
