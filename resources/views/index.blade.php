@@ -76,7 +76,7 @@
 
         <td class="p-4 border-b border-white/5">
           <div class="flex justify-center items-center gap-3">
-            <a class="text-xs font-bold text-amber-400 border border-amber-500/30 bg-amber-500/10 py-2 px-4 rounded-lg hover:bg-amber-500 hover:text-black transition-all duration-300 shadow-sm hover:shadow-[0_0_15px_-3px_rgba(245,158,11,0.5)]" href="/form/edit/{{ $major->id }}">
+            <a class="text-xs font-bold text-amber-400 border border-amber-500/30 bg-amber-500/10 py-2 px-4 rounded-lg hover:bg-amber-500 hover:text-white transition-all duration-300 shadow-sm hover:shadow-[0_0_15px_-3px_rgba(245,158,11,0.5)]" href="/form/edit/{{ $major->id }}">
               Edit
             </a>
 

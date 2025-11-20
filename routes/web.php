@@ -24,10 +24,7 @@ Route::get('/form/edit', function () {
 // Student Table
 Route::get('/student/index', [StudentController::class, 'index'])->name('student.index');
 Route::get('/student', [StudentController::class, 'create']);
-Route::post('/', [StudentController::class, 'store']);
+Route::post('/student/store', [StudentController::class, 'store']);
 Route::get('/student/edit/{id}', [StudentController::class, 'edit']);
 Route::put('/student/update/{id}', [StudentController::class, 'update']);
 Route::delete('/student/delete/{id}', [StudentController::class, 'destroy']);
-
-// pengguna
-Route::get('/pengguna', [penggunaController::class, 'create']);

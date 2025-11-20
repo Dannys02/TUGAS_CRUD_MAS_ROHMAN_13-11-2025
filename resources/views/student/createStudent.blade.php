@@ -8,17 +8,17 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="p-5 flex justify-center items-center min-h-screen bg-gray-100">
+<body class="p-5 bg-slate-950 flex justify-center items-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-900 via-[#0a0a0a] to-black text-slate-200 selection:bg-cyan-500 selection:text-black">
 
-    <div class="bg-white border border-gray-300 shadow-lg py-10 px-7 rounded-xl w-full max-w-md">
+    <div class="bg-[rgba(0,0,0,0.1)] border border-gray-300 shadow-lg py-10 px-7 rounded-xl w-full max-w-md">
         <h1 class="text-3xl text-center font-bold text-blue-700">Form Student</h1>
 
-        <form class="mt-7 space-y-5" action="/" method="post">
+        <form class="mt-7 space-y-5" action="/student/store" method="post">
             @csrf
 
             <div>
                 <label for="name" class="font-semibold">Name</label>
-                <input class="border border-gray-400 mt-2 w-full rounded-lg p-2" type="text" name="name"
+                <input class="bg-transparent border border-gray-400 mt-2 w-full rounded-lg p-2" type="text" name="name"
                     id="name" placeholder="Contoh: Andi Pratama">
                 @error('name')
                     <span class="text-red-600 text-sm">{{ $message }}</span>
@@ -27,7 +27,7 @@
 
             <div>
                 <label for="class" class="font-semibold">Class</label>
-                <input class="border border-gray-400 mt-2 w-full rounded-lg p-2" type="text" name="class"
+                <input class="bg-transparent border border-gray-400 mt-2 w-full rounded-lg p-2" type="text" name="class"
                     id="class" placeholder="Contoh: X IPA 1">
                 @error('class')
                     <span class="text-red-600 text-sm">{{ $message }}</span>
@@ -36,7 +36,7 @@
 
             <div>
                 <label for="phone" class="font-semibold">Phone</label>
-                <input class="border border-gray-400 mt-2 w-full rounded-lg p-2" type="text" name="phone"
+                <input class="bg-transparent border border-gray-400 mt-2 w-full rounded-lg p-2" type="text" name="phone"
                     id="phone" maxlength="20" placeholder="Contoh: 081234567890">
                 @error('phone')
                     <span class="text-red-600 text-sm">{{ $message }}</span>
@@ -45,7 +45,7 @@
 
             <div>
                 <label for="email" class="font-semibold">Email</label>
-                <input class="border border-gray-400 mt-2 w-full rounded-lg p-2" type="email" name="email"
+                <input class="bg-transparent border border-gray-400 mt-2 w-full rounded-lg p-2" type="email" name="email"
                     id="email" placeholder="Contoh: andi@gmail.com">
                 @error('email')
                     <span class="text-red-600 text-sm">{{ $message }}</span>
@@ -54,7 +54,7 @@
 
             <div>
                 <label for="gender" class="font-semibold">Gender</label>
-                <select name="gender" id="gender"
+                <select class="bg-transparent" name="gender" id="gender"
                     class="border border-gray-400 mt-2 w-full rounded-lg p-2 bg-white">
                     <option value="">-- Pilih Gender --</option>
                     <option value="laki-laki">Laki-laki</option>
@@ -67,7 +67,7 @@
 
             <div>
                 <label for="nisn" class="font-semibold">NISN</label>
-                <input class="border border-gray-400 mt-2 w-full rounded-lg p-2" type="text" name="nisn"
+                <input class="bg-transparent border border-gray-400 mt-2 w-full rounded-lg p-2" type="text" name="nisn"
                     id="nisn" maxlength="20" placeholder="Contoh: 006xxxxxxx">
                 @error('nisn')
                     <span class="text-red-600 text-sm">{{ $message }}</span>
