@@ -25,7 +25,7 @@ abstract class Controller
             'updated_at' => now()
         ]);
 
-        return "Majors created successfully";
+        return redirect('/form/index')->with('success', 'Registrer Student successfully');
     }
 
     public function edit($id)

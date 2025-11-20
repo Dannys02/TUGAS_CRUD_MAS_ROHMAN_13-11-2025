@@ -4,6 +4,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MajorController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\penggunaController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -27,3 +28,6 @@ Route::post('/', [StudentController::class, 'store']);
 Route::get('/student/edit/{id}', [StudentController::class, 'edit']);
 Route::put('/student/update/{id}', [StudentController::class, 'update']);
 Route::delete('/student/delete/{id}', [StudentController::class, 'destroy']);
+
+// pengguna
+Route::get('/pengguna', [penggunaController::class, 'create']);

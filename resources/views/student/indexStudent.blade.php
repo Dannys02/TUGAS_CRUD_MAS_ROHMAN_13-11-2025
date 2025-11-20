@@ -32,7 +32,7 @@
                     <td class="border-2 border-black p-3">{{ $student->email }}</td>
                     <td class="border-2 border-black p-3 capitalize">{{ $student->gender }}</td>
                     <td class="border-2 border-black p-3">{{ $student->nisn }}</td>
-                    <td class="border-2 border-black p-3 text-center flex justify-center gap-3">
+                    <td class="border-2 border-black p-3 text-center">
 
                         <a href="/student/edit/{{ $student->id }}"
                            class="text-white py-1 px-4 bg-yellow-500 rounded-lg hover:bg-yellow-600">
