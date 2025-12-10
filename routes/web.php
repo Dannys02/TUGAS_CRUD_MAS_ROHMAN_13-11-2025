@@ -3,6 +3,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MajorController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\subjectController;
+use App\Http\Controllers\ApotekController;
 
 Route::get("/", function () {
   return view("welcome");
@@ -39,3 +40,15 @@ Route::get("/subject/edit/{id}", [subjectController::class, "edit"]);
 Route::put("/subject/update/{id}", [subjectController::class, "update"]);
 Route::delete("/subject/delete/{id}", [subjectController::class, "destroy"]);
 Route::get("/subject/index", [subjectController::class, "index"]);
+
+// UJIAN PARAMETER OPSIONAL
+Route::get("/biodata/{nama?}/{sekolah?}/{alamat?}", function ($nama = "'Nama kamu'", $sekolah = "'Sekolah kamu'", $alamat = "'Alamat kamu'" ) {
+    return "Berikut biodata bernama $nama, sekolah di $sekolah, dan beralamat di $alamat";
+});
+
+// UJIAN APOTEK
+Route::get("/home", [ApotekController::class, "index"]);
+Route::get("/apotek", [ApotekController::class, "apotek"]);
+Route::get("/pelayanan", [ApotekController::class, "pelayanan"]);
+Route::get("/obat", [ApotekController::class, "obat"]);
+Route::get("/gallery", [ApotekController::class, "gallery"]);
